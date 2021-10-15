@@ -7,11 +7,11 @@ tkWindow = Tk()
 tkWindow.geometry('400x150')  
 tkWindow.title('Tkinter Example')
 def LogReg():
- dataset = pandas.read_excel('C:/Users/User/Desktop/Book2sri.xlsx')
+ dataset = pandas.read_excel('Dataset')
  dataset.info() 
  dataset.describe()
- X = dataset.iloc[0:209, 0].values
- y = dataset.iloc[0:209, 1].values
+ X = dataset.iloc[:, ].values
+ y = dataset.iloc[:, ].values
  plt.scatter(X,y,c='orange')
  plt.title('RSSI data analysis')
  plt.xlabel('Energy Label')
