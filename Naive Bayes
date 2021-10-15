@@ -9,9 +9,9 @@ tkWindow.geometry('400x150')
 tkWindow.title('Tkinter Example')
 def NB():
  # Importing the dataset
- dataset = pd.read_excel('C:/Users/User/Desktop/Temp.xlsx')
- X = dataset.iloc[0:209, 0:2].values
- y= dataset.iloc[0:209, 3].values
+ dataset = pd.read_excel('')
+ X = dataset.iloc[:,].values
+ y= dataset.iloc[:,].values
  from sklearn.model_selection import train_test_split
  X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3,shuffle=True)
  from sklearn.naive_bayes import GaussianNB
