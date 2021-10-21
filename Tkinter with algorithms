@@ -184,36 +184,5 @@ def LSTM():
  messagebox.showinfo('Accuracy', "LSTM accuracy")
 button5 = tkinter.Button(tkWindow, text='LSTM', bg='blue', command=LSTM)
 button5.pack(side=RIGHT)
-def Energyusage():
-    messagebox.showinfo('Low Energy Path', "0dbm")
-    messagebox.showinfo('Medium Energy Path', "2.5dbm")
-    messagebox.showinfo('High Energy Path', "4dbm")
-button6 = tkinter.Button(tkWindow, text='Energyusage', bg='red', command=Energyusage)
-button6.pack(side=BOTTOM)
-def PathFind():
- # Importing the dataset
- dataset = pd.read_excel('')
- X = dataset.iloc[0:14, 0].values
- y = dataset.iloc[0:14, 1].values
- a=np.array(y)
- b=np.array(X)
- for i in range(0,14):
-    if(a[i]>300):
-        print("Sensor Value",a[i])
-        print("Path",b[i])
- messagebox.showinfo('Paths', "Emergency Datas")   
-button7 = tkinter.Button(tkWindow, text='PathFind', bg='orange', command=PathFind)
-button7.pack(side=BOTTOM)
-def Resultcomparison():
- y=[70.6,86.2,75.4,82.4,89.2,84.1]
- x=['KNN','LogReg','NB','RF','LSTM','SVM']
- plt.bar(x,y,color='blue')
- plt.title('Comparison Graph')
- plt.xlabel('ML algorithms')
- plt.ylabel('Accuracy Score')
- plt.show()
- messagebox.showinfo('Graph', "Comparison Graph")
-button8 = tkinter.Button(tkWindow, text='Comparison', bg='blue', command=Resultcomparison)
-button8.pack(side=BOTTOM)
 tkWindow.mainloop()
 
